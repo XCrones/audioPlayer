@@ -1,0 +1,34 @@
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  //? background-size: % 100%;
+  background-repeat: no-repeat;
+  //! height: ;
+
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    //! height: ;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    //! height: px;
+    //! width: px;
+    appearance: none;
+    transform: translateY(-50%);
+    //? background-color: #000;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    //! height: px;
+    //! width: px;
+    border: none;
+    //? border-radius: ;
+    //? background-color: ;
+  }
+}

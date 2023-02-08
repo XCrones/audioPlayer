@@ -1,0 +1,47 @@
+$color-arrow: #1b191c;
+
+$width-arrow: 36px;
+$height-arrow: 2px;
+
+$color-exm-point: #c6a827;
+
+.exm-point {
+  background-color: $color-exm-point;
+  & > div {
+    &::before,
+    &::after {
+      background-color: #c6a827;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $width-arrow;
+  height: 48px;
+
+  & > div > div {
+    height: $height-arrow;
+    background-color: $color-arrow;
+    border-radius: 0 1px 1px 0;
+
+    &::before,
+    &::after {
+      background-color: $color-arrow;
+      right: -2px;
+      width: $width-arrow / 2;
+      height: $height-arrow;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+}

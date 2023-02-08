@@ -1,0 +1,46 @@
+@mixin transform-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  //? position: ;
+  //! width: px;
+  //! height: px;
+
+  & > div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    & > div {
+      position: absolute;
+      @include transform-center;
+      width: 100%;
+      //! height: px;
+      //! background-color: ;
+      //? border-radius: ;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        //! background-color: ;
+        //! right: ;
+        //! width: px;
+        //! height: px;
+      }
+
+      &::before {
+        //! top: px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        //! top: px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
